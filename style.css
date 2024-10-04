@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Jersey 25';
+}
+
+.flContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    width: 100%;
+}
+
+.flBox {
+    background-color: rgb(22, 22, 22);
+    margin: 1%;
+    padding: 1%;
+    border-radius: 10px;
+}
