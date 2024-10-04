@@ -6,34 +6,52 @@ body {
     font-family: 'Jersey 25';
 }
 
+a {
+    color: rgb(255, 206, 206);
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform 0.4s;
+    margin: 2vh;
+}
+
+a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+a:active {
+    transform: scale(1);
+    transition: transform 0.1s;    
+}
+
 .flContainer {
     display: flex;
-    flex-flow: column nowrap;
-    height: 100%;
-    width: 100%;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    height: 97vh;
+    width: 97vw;
 }
 
 .flBox {
-    background-color: rgb(22, 22, 22);
-    margin: 1%;
-    padding: 1%;
-    border-radius: 10px;
+    background-color: rgb(57, 45, 50);
+    margin: 0.5vh 0.5vw;
+    padding: 0.5vh 0.5vw;
+    border-radius: 5px;
 }
 
 #headerLinks {
     display: flex;
-    flex-flow: row;
-    justify-content: space-evenly;
-    font-size: 4em;
-    text-transform: uppercase;
-    > a {
-        text-decoration: none;
-        transform: scale(1);
-        transition: transform 0.4s;
-    }
-    
-    > a:hover {
-        transform: scale(1.2);
-        transition: transform 0.2s;
-    }
+    flex-flow: column;
+    justify-content: safe;
+    align-items: start;
+    text-align: left;
+    width: 12vw;
+    font-size: 2vw;
+    text-transform: lowercase;
+}
+
+#content {
+    width: 100%;
+    font-size: 2em;
+    padding: 2vh 2vw 2vh 2vw;
 }
