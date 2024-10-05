@@ -59,6 +59,17 @@ function counter() {
 
 }
 
+let total = 0;
+let dep = 0;
+
+function sum(array) {
+    array.forEach(function(val) {
+        total += val;
+    })
+    console.log(sum);
+    return total;
+}
+
 function counterCompute() {
     let p = doc.getElementById('pennies').value * 0.01;
     let n = doc.getElementById('nickels').value * 0.05;
@@ -74,9 +85,16 @@ function counterCompute() {
     let NRs = doc.getElementById('nrs').value * 2;
     let DRs = doc.getElementById('drs').value * 5;
     let QRs = doc.getElementById('qrs').value * 10;
-    
-    let total = (p+n+d+q+ones+fives+tens+$_20s+$_50s+$_100s+PRs+NRs+DRs+QRs);
-    let dep = total - 400.00;
+
+
+    let denomsList = [p, n, d, q, ones, fives, tens, $_20s, $_50s, $_100s, PRs, NRs, DRs, QRs];
+    total = 0;
+    total = sum(denomsList);
+    dep = 0;
+    dep = total - 400.00;
+    if (dep < 0) {
+        dep = 0;
+    }
 
     console.log(total, dep)
     let totalDiv = doc.getElementById('total');
@@ -86,5 +104,20 @@ function counterCompute() {
 }
 
 function clearInputs() {
+    let inputs = doc.getElementsByTagName('input');
+    let inpDict = Object.entries(inputs);
+    console.table(inpDict);
+    for (i=0; i < inpDict.length; i++) {
+        inpDict[i][1].value = '';
+    }
+    counterCompute();
+}
 
+let regNum = 0;
+
+function addReg() {
+    regNum++;
+    let submit = doc.getElementById('submitBox');
+    let subText = `<div><h1>Reg.${regNum}</h1><p>Total: $${total.toFixed(2)}<br>Deposit: $${dep.toFixed(2)}</p></div>`
+    submit.innerHTML += subText;
 }

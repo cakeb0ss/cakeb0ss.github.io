@@ -45,29 +45,50 @@
 <!-- COUNTER HTML -->
 <template id="counterTemp">
     <div id="content" class="flBox" oninput="counterCompute();">
-    <h1>Reg Counter</h1>
-
-    <div id="counterInputs">
-    <input type="number" id="pennies" placeholder="pennies"></input>
-    <input type="number" id="nickels" placeholder="nickels"></input>
-    <input type="number" id="dimes" placeholder="dimes"></input>
-    <input type="number" id="qs" placeholder="quarters"></input>
-    <input type="number" id="ones" placeholder="1s"></input>
-    <input type="number" id="five"placeholder="5s"></input>
-    <input type="number" id="ten"placeholder="10s"></input>
-    <input type="number" id="twen"placeholder="20s"></input>
-    <input type="number" id="fift"placeholder="50s"></input>
-    <input type="number" id="hund"placeholder="100s"></input>
-    <input type="number" id="prs"placeholder="PRs"></input>
-    <input type="number" id="nrs"placeholder="NRs"></input>
-    <input type="number" id="drs"placeholder="DRs"></input>
-    <input type="number" id="qrs"placeholder="QRs"></input>
+        <h1>Reg Counter</h1>
+        <div id="regDiv">
+        <div id="counterInputs">
+        <span>Pennies:<input type="" id="pennies" placeholder="pennies"></input></span>
+        
+        <span>Nickels:<input type="" id="nickels" placeholder="nickels"></input></span>
+        
+        <span>Dimes:<input type="" id="dimes" placeholder="dimes"></input></span>
+        
+        <span>Quarters:<input type="" id="qs" placeholder="quarters"></input></span>
+        
+        <span>1s:<input type="" id="ones" placeholder="1s"></input></span>
+        
+        <span>5s:<input type="" id="five"placeholder="5s"></input></span>
+        
+        <span>10s:<input type="" id="ten"placeholder="10s"></input></span>
+        
+        <span>20s:<input type="" id="twen"placeholder="20s"></input></span>
+        
+        <span>50s:<input type="" id="fift"placeholder="50s"></input></span>
+        
+        <span>100s:<input type="" id="hund"placeholder="100s"></input></span>
+        
+        <span>PRs:<input type="" id="prs"placeholder="PRs"></input></span>
+        
+        <span>NRs:<input type="" id="nrs"placeholder="NRs"></input></span>
+        
+        <span>DRs:<input type="" id="drs"placeholder="DRs"></input></span>
+        
+        <span>QRs:<input type="" id="qrs"placeholder="QRs"></input></span>
+        
+        <br>
+        <div id="total">Total: $</div><br>
+        <div id="deposit">Deposit: $</div>
+        <button onclick="clearInputs();">Clear</button>
+        <button onclick="addReg();">Submit</button>
     </div>
 
-    <div id="total">Total: $</div>
-    <div id="deposit">Deposit: $</div>
-    <br>
-    <button onclick="clearInputs();">Clear</button>
+        <div id="submitBox">
+
+        </div>
+    
+    </div>
+
     </div>
 
 </html>
