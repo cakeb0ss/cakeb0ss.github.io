@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
+/* * {
+    border: 1px solid white;
+} */
+
 body {
     background-color: black;
     color: white;
@@ -66,13 +70,16 @@ a:active {
 #submitBox {
     display: flex;
     flex-flow: row wrap;
-    align-items: stretch;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 #submitBox div {
-    margin: 2vw;
-    align-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin: 0.5vw;
+    align-self: start;
 }
 
 #counterInputs {
@@ -104,6 +111,7 @@ button {
     font-size: 0.5em;
     color:rgb(255, 206, 206);
     background-color:rgb(80, 65, 65);
+    margin: 0.5vh;
     border: 0;
     border-radius: 5px;
 }
