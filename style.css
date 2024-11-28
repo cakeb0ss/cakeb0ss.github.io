@@ -127,3 +127,14 @@ input[type=number]
 {
   -moz-appearance: textfield;
 }
+
+#pat {
+    display: flex;
+    justify-content: center;
+    background: white;
+    color: black;
+    height: 95vh;
+}
+#ascii {
+    font-size: 0.5%;
+}
